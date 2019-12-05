@@ -6,4 +6,4 @@ def attachments = [
   ]
 ]
 
-slackSend (channel: ' #mcms-iscp-developer',color: 'good',teamDomain: 'gtsimi', token: 'VhvJjiqCgAWBQF5ZYiF2VIDR')
+slackSend(channel: '#mcms-iscp-developer', attachments: attachments)
