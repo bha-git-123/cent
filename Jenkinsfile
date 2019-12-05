@@ -9,3 +9,4 @@ pipeline {
         }
     }
 }
+slackSend color: 'good', message: 'Message from Jenkins Pipeline'
