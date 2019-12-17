@@ -1,13 +1,14 @@
 def attachments = [
   [
-    text: 'Jenkins testing is going on',
+    text: 'Jenkins testing',
     fallback: 'Hey, Vader seems to be mad at you.',
-    color: '#ff0000'
+    color: 'good'
   ]
 ]
 node {
   sh "echo hey > blah.txt"
-  slackUploadFile filePath: '*.txt', initialComment:  'HEY HEY'
+  slackSend(channel: '#mcms-iscp-developer', attachments: attachments)
+  slackUploadFile channel: "#mcms-iscp-developer", filePath: "blah.txt", initialComment:  'HEY HEY'
 }
 
-slackSend(channel: '#mcms-iscp-developer', attachments: attachments)
+
