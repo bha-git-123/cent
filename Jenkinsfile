@@ -7,8 +7,8 @@ def attachments = [
 ]
 node {
   sh "echo hey > blah.txt"
-  slackSend(channel: '#mcms-iscp-developer', attachments: attachments)
-  slackUploadFile channel: "#mcms-iscp-developer", filePath: "blah.txt", initialComment:  'HEY HEY'
+  slackSend(channel: '#automation', attachments: attachments)
+  slackUploadFile channel: "#automation", filePath: "blah.txt", initialComment:  'HEY HEY'
 }
 
 
